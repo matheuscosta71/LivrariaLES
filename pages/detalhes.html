@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Hobbit - Bookland</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detalhes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Bookland</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Catálogo</a>
+                    <a href="carrinho.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        Carrinho <span class="cart-count">0</span>
+                    </a>
+                    <a href="cliente.html" class="nav-link">Minha Conta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../index.html">Ficção</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>O Hobbit</span>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Detalhes do Livro -->
+            <section class="book-details">
+                <div class="book-main">
+                    <div class="book-cover">
+                        <img src="../images/hobbit.jpg" alt="Capa do livro O Hobbit">
+                        <div class="book-badge promocao">30% OFF</div>
+                    </div>
+                    
+                    <div class="book-info-detailed">
+                        <h1 class="book-title">O Hobbit</h1>
+                        <p class="book-subtitle">ou Lá e de Volta Outra Vez</p>
+                        <p class="book-author">por <strong>J.R.R. Tolkien</strong></p>
+                        
+                        <div class="book-rating-detailed">
+                            <div class="stars-large">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-score">4.8</span>
+                            <span class="rating-count">(2.847 avaliações)</span>
+                        </div>
+
+                        <div class="book-price-section">
+                            <div class="price-info">
+                                <span class="price-old">R$ 65,00</span>
+                                <span class="price-current">R$ 45,50</span>
+                                <span class="discount-badge">30% OFF</span>
+                            </div>
+                            <p class="price-installment">ou 3x de R$ 15,17 sem juros</p>
+                        </div>
+
+                        <div class="book-stock-info">
+                            <i class="fas fa-check-circle"></i>
+                            <span>15 unidades disponíveis</span>
+                        </div>
+
+                        <div class="book-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn" onclick="decreaseQty()">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="15">
+                                <button class="qty-btn" onclick="increaseQty()">+</button>
+                            </div>
+                            <button class="btn-add-cart-large">
+                                <i class="fas fa-shopping-cart"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                            <button class="btn-favorite">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="book-metadata">
+                            <div class="metadata-item">
+                                <strong>Editora:</strong> <span>HarperCollins Brasil</span>
+                            </div>
+                            <div class="metadata-item">
+                                <strong>Ano:</strong> <span>2019</span>
+                            </div>
+                            <div class="metadata-item">
+                                <strong>Edição:</strong> <span>1ª</span>
+                            </div>
+                            <div class="metadata-item">
+                                <strong>ISBN:</strong> <span>978-85-359-3094-5</span>
+                            </div>
+                            <div class="metadata-item">
+                                <strong>Páginas:</strong> <span>336</span>
+                            </div>
+                            <div class="metadata-item">
+                                <strong>Idioma:</strong> <span>Português</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sinopse -->
+                <section class="book-synopsis">
+                    <h2>Sinopse</h2>
+                    <div class="synopsis-content">
+                        <p>Bilbo Bolseiro era um hobbit que levava uma vida confortável e sem ambições, raramente aventurando-se para além de sua despensa bem abastecida. Mas sua tranquilidade é perturbada quando o mago Gandalf e uma companhia de anões batem à sua porta e o levam para uma expedição.</p>
+                        
+                        <p>Eles têm um plano para roubar o tesouro guardado por Smaug, o Magnífico, um dragão grande e muito perigoso. Bilbo reluta muito em participar desta aventura, mas acaba se juntando ao grupo, sem imaginar que em sua jornada encontrará um anel mágico e enfrentará criaturas aterrorizantes como aranhas gigantes, elfos da floresta, lobos selvagens e, claro, o próprio Smaug.</p>
+                        
+                        <p>Escrito para J.R.R. Tolkien para seus próprios filhos, O Hobbit foi publicado em 1937 e se tornou um dos maiores clássicos da literatura fantástica, conquistando milhões de leitores ao redor do mundo e dando origem à trilogia O Senhor dos Anéis.</p>
+                    </div>
+                </section>
+
+                <!-- Avaliações e Comentários -->
+                <section class="reviews-section">
+                    <div class="reviews-header">
+                        <h2>Avaliações dos Leitores</h2>
+                        <button class="btn-write-review">Escrever Avaliação</button>
+                    </div>
+
+                    <div class="reviews-summary">
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span>5 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 75%"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 20%"></div>
+                                </div>
+                                <span>20%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 3%"></div>
+                                </div>
+                                <span>3%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 1%"></div>
+                                </div>
+                                <span>1%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 estrela</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 1%"></div>
+                                </div>
+                                <span>1%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>Maria Silva</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="review-date">15 de agosto, 2024</span>
+                            </div>
+                            <div class="review-content">
+                                <h5>Uma aventura inesquecível!</h5>
+                                <p>Simplesmente magnífico! Tolkien criou um mundo tão rico e detalhado que é impossível não se envolver completamente na história. A jornada de Bilbo é cativante do início ao fim, e a escrita é fluida e envolvente. Recomendo para todas as idades!</p>
+                            </div>
+                            <div class="review-actions">
+                                <button class="review-helpful">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    Útil (23)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>João Santos</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="review-date">10 de agosto, 2024</span>
+                            </div>
+                            <div class="review-content">
+                                <h5>Clássico da fantasia</h5>
+                                <p>Um livro que marcou gerações e continua encantando novos leitores. A tradução está excelente e a edição é de qualidade. Perfeito para quem quer começar no universo de Tolkien antes de partir para O Senhor dos Anéis.</p>
+                            </div>
+                            <div class="review-actions">
+                                <button class="review-helpful">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    Útil (18)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>Ana Costa</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="review-date">5 de agosto, 2024</span>
+                            </div>
+                            <div class="review-content">
+                                <h5>Entrega rápida e livro perfeito</h5>
+                                <p>Além da história ser maravilhosa, quero elogiar a Bookland pela entrega super rápida e o livro chegou em perfeitas condições. Já estou pensando em comprar O Senhor dos Anéis aqui também!</p>
+                            </div>
+                            <div class="review-actions">
+                                <button class="review-helpful">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    Útil (12)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-load-more">Ver mais avaliações</button>
+                </section>
+
+                <!-- Livros Relacionados -->
+                <section class="related-books">
+                    <h2>Quem comprou este livro também comprou</h2>
+                    <div class="related-books-grid">
+                        <div class="related-book-card">
+                            <div class="related-book-image">
+                                <img src="../images/senhor.jpg" alt="Capa do livro O Senhor dos Anéis">
+                            </div>
+                            <div class="related-book-info">
+                                <h4>O Senhor dos Anéis</h4>
+                                <p>J.R.R. Tolkien</p>
+                                <div class="related-book-price">R$ 89,90</div>
+                                <button class="btn-add-related">Adicionar</button>
+                            </div>
+                        </div>
+
+                        <div class="related-book-card">
+                            <div class="related-book-image">
+                                <img src="C:\Users\Matheus Costa\Documents\FATEC\2º SEM - 2025\LES\livraria-online\images\cronicas.jpg" alt="As Crônicas de Nárnia">
+                            </div>
+                            <div class="related-book-info">
+                                <h4>As Crônicas de Nárnia</h4>
+                                <p>C.S. Lewis</p>
+                                <div class="related-book-price">R$ 67,50</div>
+                                <button class="btn-add-related">Adicionar</button>
+                            </div>
+                        </div>
+
+                        <div class="related-book-card">
+                            <div class="related-book-image">
+                                <img src="C:\Users\Matheus Costa\Documents\FATEC\2º SEM - 2025\LES\livraria-online\images\harry.jpg" alt="Harry Potter">
+                            </div>
+                            <div class="related-book-info">
+                                <h4>Harry Potter e a Pedra Filosofal</h4>
+                                <p>J.K. Rowling</p>
+                                <div class="related-book-price">R$ 34,90</div>
+                                <button class="btn-add-related">Adicionar</button>
+                            </div>
+                        </div>
+
+                        <div class="related-book-card">
+                            <div class="related-book-image">
+                                <img src="https://via.placeholder.com/150x225/F39C12/FFFFFF?text=O+Nome+do+Vento" alt="O Nome do Vento">
+                            </div>
+                            <div class="related-book-info">
+                                <h4>O Nome do Vento</h4>
+                                <p>Patrick Rothfuss</p>
+                                <div class="related-book-price">R$ 52,90</div>
+                                <button class="btn-add-related">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookland</h4>
+                    <p>Sua livraria online de confiança</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 14h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (11) 1234-5678</p>
+                    <p>📧 contato@Bookland.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/detalhes.js"></script>
+</body>
+</html>
+

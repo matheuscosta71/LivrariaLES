@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookland - Sua Livraria Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Bookland</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Catálogo</a>
+                    <a href="pages/carrinho.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        Carrinho <span class="cart-count">0</span>
+                    </a>
+                    <a href="pages/cliente.html" class="nav-link">Minha Conta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Promocional -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Descubra seu próximo livro favorito</h1>
+                <p>Promoção especial: 30% de desconto em todos os bestsellers!</p>
+                <button class="btn-primary">Ver Ofertas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Busca -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar por título, autor ou categoria..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Filtros Laterais -->
+                <aside class="filters">
+                    <h3>Filtros</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Categoria</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" name="categoria" value="ficcao">
+                            <span>Ficção</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="categoria" value="romance">
+                            <span>Romance</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="categoria" value="suspense">
+                            <span>Suspense</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="categoria" value="biografia">
+                            <span>Biografia</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="categoria" value="tecnologia">
+                            <span>Tecnologia</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Preço</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="preco" value="0-30">
+                            <span>Até R$ 30</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="preco" value="30-60">
+                            <span>R$ 30 - R$ 60</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="preco" value="60-100">
+                            <span>R$ 60 - R$ 100</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="preco" value="100+">
+                            <span>Acima de R$ 100</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Avaliação</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="avaliacao" value="5">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="avaliacao" value="4">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>ou mais</span>
+                            </span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="avaliacao" value="3">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>ou mais</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Editora</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" name="editora" value="companhia-letras">
+                            <span>Companhia das Letras</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="editora" value="record">
+                            <span>Record</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="editora" value="globo">
+                            <span>Globo Livros</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="editora" value="saraiva">
+                            <span>Saraiva</span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Grid de Livros -->
+                <section class="books-grid">
+                    <div class="books-header">
+                        <h2>Catálogo de Livros</h2>
+                        <div class="sort-options">
+                            <select class="sort-select">
+                                <option value="relevancia">Mais Relevantes</option>
+                                <option value="preco-menor">Menor Preço</option>
+                                <option value="preco-maior">Maior Preço</option>
+                                <option value="avaliacao">Melhor Avaliação</option>
+                                <option value="lancamento">Lançamentos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="books-container">
+                        <!-- Card de Livro 1 -->
+                        <div class="book-card" data-categoria="ficcao" data-preco="45" data-avaliacao="5">
+                            <div class="book-image">
+                                <img src="images/hobbit.jpg" alt="Capa do livro O Hobbit">
+                                <div class="book-badge promocao">30% OFF</div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">O Hobbit</h3>
+                                <p class="book-author">J.R.R. Tolkien</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.8)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-old">R$ 65,00</span>
+                                    <span class="price-current">R$ 45,50</span>
+                                </div>
+                                <div class="book-stock">15 unidades disponíveis</div>
+                                <button class="btn-add-cart" onclick="window.location.href='pages/detalhes.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card de Livro 2 -->
+                        <div class="book-card" data-categoria="romance" data-preco="38" data-avaliacao="4">
+                            <div class="book-image">
+                                <img src="images/orgulho.jpeg" alt="Capa do livro Orgulho e Preconceito">
+                                <div class="book-badge lancamento">Lançamento</div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Orgulho e Preconceito</h3>
+                                <p class="book-author">Jane Austen</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.2)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-current">R$ 38,90</span>
+                                </div>
+                                <div class="book-stock">8 unidades disponíveis</div>
+                                <button class="btn-add-cart" onclick="window.location.href='pages/detalhes.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card de Livro 3 -->
+                        <div class="book-card" data-categoria="suspense" data-preco="52" data-avaliacao="5">
+                            <div class="book-image">
+                                <img src="images/Garota.jpg" alt="Capa do livro Garota Exemplar">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Garota Exemplar</h3>
+                                <p class="book-author">Gillian Flynn</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.9)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-current">R$ 52,00</span>
+                                </div>
+                                <div class="book-stock">22 unidades disponíveis</div>
+                                <button class="btn-add-cart" onclick="window.location.href='pages/detalhes.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card de Livro 4 -->
+                        <div class="book-card" data-categoria="tecnologia" data-preco="89" data-avaliacao="4">
+                            <div class="book-image">
+                                <img src="images/code.jpg" alt="Capa do livro Código Limpo">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Código Limpo</h3>
+                                <p class="book-author">Robert C. Martin</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.6)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-current">R$ 89,90</span>
+                                </div>
+                                <div class="book-stock">5 unidades disponíveis</div>
+                                <button class="btn-add-cart" onclick="window.location.href='pages/detalhes.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card de Livro 5 -->
+                        <div class="book-card" data-categoria="biografia" data-preco="67" data-avaliacao="5">
+                            <div class="book-image">
+                                <img src="images/Steve.jpg" alt="Capa do livro Steve Jobs">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">Steve Jobs</h3>
+                                <p class="book-author">Walter Isaacson</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.7)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-current">R$ 67,50</span>
+                                </div>
+                                <div class="book-stock">12 unidades disponíveis</div>
+                                <button class="btn-add-cart" onclick="window.location.href='pages/detalhes.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card de Livro 6 - Esgotado -->
+                        <div class="book-card esgotado" data-categoria="ficcao" data-preco="42" data-avaliacao="4">
+                            <div class="book-image">
+                                <img src="images/1984.jpg" alt="Capa do livro 1984">
+                                <div class="book-badge esgotado">Esgotado</div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">1984</h3>
+                                <p class="book-author">George Orwell</p>
+                                <div class="book-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">(4.5)</span>
+                                </div>
+                                <div class="book-price">
+                                    <span class="price-current">R$ 42,00</span>
+                                </div>
+                                <div class="book-stock">Produto esgotado</div>
+                                <button class="btn-add-cart" disabled>
+                                    <i class="fas fa-bell"></i>
+                                    Avisar quando chegar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookland</h4>
+                    <p>Sua livraria online de confiança</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 14h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (11) 1234-5678</p>
+                    <p>📧 contato@Bookland.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

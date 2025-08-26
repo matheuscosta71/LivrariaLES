@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Bookland</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Bookland</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Catálogo</a>
+                    <a href="carrinho.html" class="nav-link active">
+                        <i class="fas fa-shopping-cart"></i>
+                        Carrinho <span class="cart-count">3</span>
+                    </a>
+                    <a href="cliente.html" class="nav-link">Minha Conta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Carrinho de Compras</span>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="cart-header">
+                <h1>Meu Carrinho</h1>
+                <p class="cart-subtitle">3 itens adicionados</p>
+            </div>
+
+            <div class="cart-content">
+                <!-- Lista de Itens do Carrinho -->
+                <section class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="../images/hobbit.jpg" alt="Capa do livro O Hobbit">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">O Hobbit</h3>
+                            <p class="item-author">J.R.R. Tolkien</p>
+                            <p class="item-isbn">ISBN: 978-85-359-3094-5</p>
+                            <div class="item-availability">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Em estoque</span>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <div class="price-info">
+                                <span class="price-old">R$ 65,00</span>
+                                <span class="price-current">R$ 45,50</span>
+                            </div>
+                            <div class="discount-info">30% OFF</div>
+                        </div>
+                        <div class="item-quantity">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(1, -1)">-</button>
+                                <input type="number" value="2" min="1" max="15" id="qty-1">
+                                <button class="qty-btn plus" onclick="updateQuantity(1, 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-value">R$ 91,00</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-remove" onclick="removeItem(1)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="btn-favorite">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="../images/orgulho.jpeg" alt="Capa do livro Orgulho e Preconceito">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">Orgulho e Preconceito</h3>
+                            <p class="item-author">Jane Austen</p>
+                            <p class="item-isbn">ISBN: 978-85-250-6891-2</p>
+                            <div class="item-availability">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Em estoque</span>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <div class="price-info">
+                                <span class="price-current">R$ 38,90</span>
+                            </div>
+                        </div>
+                        <div class="item-quantity">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(2, -1)">-</button>
+                                <input type="number" value="1" min="1" max="8" id="qty-2">
+                                <button class="qty-btn plus" onclick="updateQuantity(2, 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-value">R$ 38,90</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-remove" onclick="removeItem(2)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="btn-favorite">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="../images/code.jpg" alt="Capa do livro Código Limpo">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">Clean Code</h3>
+                            <p class="item-author">Robert C. Martin</p>
+                            <p class="item-isbn">ISBN: 978-85-7608-312-8</p>
+                            <div class="item-availability">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Últimas unidades</span>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <div class="price-info">
+                                <span class="price-current">R$ 89,90</span>
+                            </div>
+                        </div>
+                        <div class="item-quantity">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(3, -1)">-</button>
+                                <input type="number" value="1" min="1" max="5" id="qty-3">
+                                <button class="qty-btn plus" onclick="updateQuantity(3, 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-value">R$ 89,90</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-remove" onclick="removeItem(3)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="btn-favorite">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-actions-bottom">
+                        <button class="btn-continue-shopping" onclick="window.location.href='../index.html'">
+                            <i class="fas fa-arrow-left"></i>
+                            Continuar Comprando
+                        </button>
+                        <button class="btn-clear-cart" onclick="clearCart()">
+                            <i class="fas fa-trash"></i>
+                            Limpar Carrinho
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Resumo do Pedido -->
+                <aside class="order-summary">
+                    <div class="summary-card">
+                        <h2>Resumo do Pedido</h2>
+                        
+                        <div class="summary-section">
+                            <div class="summary-line">
+                                <span>Subtotal (3 itens)</span>
+                                <span>R$ 219,80</span>
+                            </div>
+                            <div class="summary-line discount">
+                                <span>Desconto</span>
+                                <span>- R$ 26,00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Frete</span>
+                                <span id="shipping-cost">Calcular</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Total</span>
+                                <span id="total-cost">R$ 193,80</span>
+                            </div>
+                        </div>
+
+                        <!-- Cupom de Desconto -->
+                        <div class="coupon-section">
+                            <h3>Cupom de Desconto</h3>
+                            <div class="coupon-input">
+                                <input type="text" placeholder="Digite seu cupom" id="coupon-code">
+                                <button class="btn-apply-coupon" onclick="applyCoupon()">Aplicar</button>
+                            </div>
+                            <div class="coupon-suggestions">
+                                <p>Cupons disponíveis:</p>
+                                <div class="coupon-tag" onclick="applySuggestedCoupon('PRIMEIRA10')">
+                                    PRIMEIRA10 - 10% OFF
+                                </div>
+                                <div class="coupon-tag" onclick="applySuggestedCoupon('FRETE15')">
+                                    FRETE15 - Frete Grátis
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cálculo de Frete -->
+                        <div class="shipping-section">
+                            <h3>Calcular Frete</h3>
+                            <div class="shipping-input">
+                                <input type="text" placeholder="Digite seu CEP" id="cep-input" maxlength="9">
+                                <button class="btn-calculate-shipping" onclick="calculateShipping()">Calcular</button>
+                            </div>
+                            <div class="shipping-options" id="shipping-options" style="display: none;">
+                                <div class="shipping-option">
+                                    <input type="radio" name="shipping" value="sedex" id="sedex">
+                                    <label for="sedex">
+                                        <div class="shipping-info">
+                                            <span class="shipping-name">SEDEX</span>
+                                            <span class="shipping-time">1-2 dias úteis</span>
+                                        </div>
+                                        <span class="shipping-price">R$ 15,90</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" name="shipping" value="pac" id="pac" checked>
+                                    <label for="pac">
+                                        <div class="shipping-info">
+                                            <span class="shipping-name">PAC</span>
+                                            <span class="shipping-time">3-5 dias úteis</span>
+                                        </div>
+                                        <span class="shipping-price">R$ 8,50</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" name="shipping" value="expressa" id="expressa">
+                                    <label for="expressa">
+                                        <div class="shipping-info">
+                                            <span class="shipping-name">Entrega Expressa</span>
+                                            <span class="shipping-time">Mesmo dia</span>
+                                        </div>
+                                        <span class="shipping-price">R$ 25,00</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botão Finalizar Compra -->
+                        <button class="btn-checkout" onclick="window.location.href='checkout.html'">
+                            <i class="fas fa-credit-card"></i>
+                            Finalizar Compra
+                        </button>
+
+                        <!-- Segurança e Garantias -->
+                        <div class="security-info">
+                            <div class="security-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Compra 100% segura</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-undo"></i>
+                                <span>7 dias para troca</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Frete grátis acima de R$ 99</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Produtos Recomendados -->
+            <section class="recommended-products">
+                <h2>Você também pode gostar</h2>
+                <div class="recommended-grid">
+                    <div class="recommended-item">
+                        <div class="recommended-image">
+                            <img src="../images/harry.jpg" alt="Capa do livro Harry Potter">
+                        </div>
+                        <div class="recommended-info">
+                            <h4>Harry Potter e a Pedra Filosofal</h4>
+                            <p>J.K. Rowling</p>
+                            <div class="recommended-price">R$ 34,90</div>
+                            <button class="btn-add-recommended">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="recommended-item">
+                        <div class="recommended-image">
+                            <img src="../images/senhor.jpg" alt="Capa do livro O Senhor dos Anéis">
+                        </div>
+                        <div class="recommended-info">
+                            <h4>O Senhor dos Anéis</h4>
+                            <p>J.R.R. Tolkien</p>
+                            <div class="recommended-price">R$ 89,90</div>
+                            <button class="btn-add-recommended">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="recommended-item">
+                        <div class="recommended-image">
+                            <img src="..\images/1984.jpg" alt="Capa do livro 1984">
+                        </div>
+                        <div class="recommended-info">
+                            <h4>1984</h4>
+                            <p>George Orwell</p>
+                            <div class="recommended-price">R$ 42,00</div>
+                            <button class="btn-add-recommended">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="recommended-item">
+                        <div class="recommended-image">
+                            <img src="..\images/dom.jpg" alt="Capa do livro Dom Casmurro">
+                        </div>
+                        <div class="recommended-info">
+                            <h4>Dom Casmurro</h4>
+                            <p>Machado de Assis</p>
+                            <div class="recommended-price">R$ 28,90</div>
+                            <button class="btn-add-recommended">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookland</h4>
+                    <p>Sua livraria online de confiança</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 14h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (11) 1234-5678</p>
+                    <p>📧 contato@Bookland.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>
+

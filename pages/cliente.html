@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Bookland</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cliente.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Bookland</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Catálogo</a>
+                    <a href="carrinho.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        Carrinho <span class="cart-count">0</span>
+                    </a>
+                    <a href="cliente.html" class="nav-link active">Minha Conta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Minha Conta</span>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="account-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <h1>Olá, Matheus Costa!</h1>
+                        <p>Membro desde março de 2023</p>
+                    </div>
+                </div>
+                <div class="account-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Pedidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">Livros</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">R$ 1.234</div>
+                        <div class="stat-label">Economizado</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-content">
+                <!-- Menu Lateral -->
+                <aside class="account-sidebar">
+                    <nav class="account-nav">
+                        <a href="#" class="nav-item active" data-section="orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Meus Pedidos</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Endereços</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="cards">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Cartões</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="recommendations">
+                            <i class="fas fa-magic"></i>
+                            <span>Recomendações IA</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="profile">
+                            <i class="fas fa-user-edit"></i>
+                            <span>Dados Pessoais</span>
+                        </a>
+                        <a href="#" class="nav-item" data-section="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Segurança</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Conteúdo das Seções -->
+                <section class="account-main">
+                    <!-- Seção: Meus Pedidos -->
+                    <div class="section-content active" id="orders">
+                        <div class="section-header">
+                            <h2>Meus Pedidos</h2>
+                            <div class="order-filters">
+                                <select class="filter-select">
+                                    <option value="all">Todos os pedidos</option>
+                                    <option value="processing">Processando</option>
+                                    <option value="approved">Aprovado</option>
+                                    <option value="transit">Em Trânsito</option>
+                                    <option value="delivered">Entregue</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Pedido #BS2024001234</h3>
+                                        <p>Realizado em 24/08/2024</p>
+                                    </div>
+                                    <div class="order-status processing">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Processando Pagamento</span>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="../images/hobbit.jpg" alt="Capa do livro O Hobbit">
+                                        <div class="item-details">
+                                            <h4>O Hobbit</h4>
+                                            <p>J.R.R. Tolkien</p>
+                                            <p>Quantidade: 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <img src="../images/orgulho.jpeg" alt="Capa do livro Orgulho e Preconceito">
+                                        <div class="item-details">
+                                            <h4>Orgulho e Preconceito</h4>
+                                            <p>Jane Austen</p>
+                                            <p>Quantidade: 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total: <strong>R$ 202,30</strong></span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn-secondary">Ver Detalhes</button>
+                                        <button class="btn-primary">Rastrear Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Pedido #BS2024001233</h3>
+                                        <p>Realizado em 20/08/2024</p>
+                                    </div>
+                                    <div class="order-status transit">
+                                        <i class="fas fa-truck"></i>
+                                        <span>Em Trânsito</span>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="../images/code.jpg" alt="Capa do livro Código Limpo">
+                                        <div class="item-details">
+                                            <h4>Clean Code</h4>
+                                            <p>Robert C. Martin</p>
+                                            <p>Quantidade: 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total: <strong>R$ 89,90</strong></span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn-secondary">Ver Detalhes</button>
+                                        <button class="btn-primary">Rastrear Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Pedido #BS2024001232</h3>
+                                        <p>Realizado em 15/08/2024</p>
+                                    </div>
+                                    <div class="order-status delivered">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Entregue</span>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="../images/harry.jpg" alt="Capa do livro Harry Potter">
+                                        <div class="item-details">
+                                            <h4>Harry Potter e a Pedra Filosofal</h4>
+                                            <p>J.K. Rowling</p>
+                                            <p>Quantidade: 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total: <strong>R$ 34,90</strong></span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn-secondary">Ver Detalhes</button>
+                                        <button class="btn-exchange">Solicitar Troca</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Endereços -->
+                    <div class="section-content" id="addresses">
+                        <div class="section-header">
+                            <h2>Meus Endereços</h2>
+                            <button class="btn-primary" onclick="openAddressModal()">
+                                <i class="fas fa-plus"></i>
+                                Adicionar Endereço
+                            </button>
+                        </div>
+
+                        <div class="addresses-grid">
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Casa</h3>
+                                    <div class="address-badge default">Padrão</div>
+                                </div>
+                                <div class="address-details">
+                                    <p><strong>Matheus Costa</strong></p>
+                                    <p>Rua das Flores, 123 - Apto 45</p>
+                                    <p>Vila Madalena - São Paulo/SP</p>
+                                    <p>CEP: 05435-000</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-edit">Editar</button>
+                                    <button class="btn-delete">Excluir</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Trabalho</h3>
+                                </div>
+                                <div class="address-details">
+                                    <p><strong>Matheus Costa</strong></p>
+                                    <p>Av. Paulista, 1000 - Sala 1205</p>
+                                    <p>Bela Vista - São Paulo/SP</p>
+                                    <p>CEP: 01310-100</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-edit">Editar</button>
+                                    <button class="btn-delete">Excluir</button>
+                                    <button class="btn-set-default">Tornar Padrão</button>
+                                </div>
+                                
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Cobrança</h3>
+                                </div>
+                                <div class="address-details">
+                                    <p><strong>Matheus Costa</strong></p>
+                                    <p>Av. São Luís, 99 - 14° Andar</p>
+                                    <p>República - São Paulo/SP</p>
+                                    <p>CEP: 08754-985</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-edit">Editar</button>
+                                    <button class="btn-delete">Excluir</button>
+                                    <button class="btn-set-default">Tornar Padrão</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Cartões -->
+                    <div class="section-content" id="cards">
+                        <div class="section-header">
+                            <h2>Meus Cartões</h2>
+                            <button class="btn-primary" onclick="openCardModal()">
+                                <i class="fas fa-plus"></i>
+                                Adicionar Cartão
+                            </button>
+                        </div>
+
+                        <div class="cards-grid">
+                            <div class="card-item">
+                                <div class="card-visual">
+                                    <div class="card-type">
+                                        <i class="fab fa-cc-visa"></i>
+                                    </div>
+                                    <div class="card-number">**** **** **** 1234</div>
+                                    <div class="card-name">JOÃO SILVA</div>
+                                    <div class="card-expiry">12/26</div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-edit">Editar</button>
+                                    <button class="btn-delete">Remover</button>
+                                </div>
+                            </div>
+
+                            <div class="card-item">
+                                <div class="card-visual mastercard">
+                                    <div class="card-type">
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </div>
+                                    <div class="card-number">**** **** **** 5678</div>
+                                    <div class="card-name">JOÃO SILVA</div>
+                                    <div class="card-expiry">08/27</div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-edit">Editar</button>
+                                    <button class="btn-delete">Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Recomendações IA -->
+                    <div class="section-content" id="recommendations">
+                        <div class="section-header">
+                            <h2>Recomendações Personalizadas</h2>
+                            <p class="section-subtitle">Baseado no seu histórico de compras e preferências</p>
+                        </div>
+
+                        <div class="recommendations-container">
+                            <div class="recommendation-category">
+                                <h3>
+                                    <i class="fas fa-fire"></i>
+                                    Baseado em suas compras recentes
+                                </h3>
+                                <div class="books-grid">
+                                    <div class="book-recommendation">
+                                        <div class="book-image">
+                                            <img src="../images/senhor.jpg" alt="Capa do livro O Senhor dos Anéis">
+                                            <div class="recommendation-score">95% match</div>
+                                        </div>
+                                        <div class="book-info">
+                                            <h4>O Senhor dos Anéis</h4>
+                                            <p>J.R.R. Tolkien</p>
+                                            <div class="book-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.9)</span>
+                                            </div>
+                                            <div class="book-price">R$ 89,90</div>
+                                            <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="book-recommendation">
+                                        <div class="book-image">
+                                            <img src="C:\Users\Matheus Costa\Documents\FATEC\2º SEM - 2025\LES\livraria-online\images\cronicas.jpg" alt="As Crônicas de Nárnia">
+                                            <div class="recommendation-score">88% match</div>
+                                        </div>
+                                        <div class="book-info">
+                                            <h4>As Crônicas de Nárnia</h4>
+                                            <p>C.S. Lewis</p>
+                                            <div class="book-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span>(4.6)</span>
+                                            </div>
+                                            <div class="book-price">R$ 67,50</div>
+                                            <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recommendation-category">
+                                <h3>
+                                    <i class="fas fa-brain"></i>
+                                    Leitores como você também compraram
+                                </h3>
+                                <div class="books-grid">
+                                    <div class="book-recommendation">
+                                        <div class="book-image">
+                                            <img src="C:\Users\Matheus Costa\Documents\FATEC\2º SEM - 2025\LES\livraria-online\images\vento.jpg" alt="O Nome do Vento">
+                                            <div class="recommendation-score">92% match</div>
+                                        </div>
+                                        <div class="book-info">
+                                            <h4>O Nome do Vento</h4>
+                                            <p>Patrick Rothfuss</p>
+                                            <div class="book-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8)</span>
+                                            </div>
+                                            <div class="book-price">R$ 52,90</div>
+                                            <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="book-recommendation">
+                                        <div class="book-image">
+                                            <img src="C:\Users\Matheus Costa\Documents\FATEC\2º SEM - 2025\LES\livraria-online\images\duna" alt="Duna">
+                                            <div class="recommendation-score">85% match</div>
+                                        </div>
+                                        <div class="book-info">
+                                            <h4>Duna</h4>
+                                            <p>Frank Herbert</p>
+                                            <div class="book-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span>(4.5)</span>
+                                            </div>
+                                            <div class="book-price">R$ 74,90</div>
+                                            <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ai-insights">
+                                <h3>
+                                    <i class="fas fa-lightbulb"></i>
+                                    Insights da IA
+                                </h3>
+                                <div class="insights-grid">
+                                    <div class="insight-card">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h4>Seu gênero favorito</h4>
+                                        <p>Você tem preferência por <strong>Fantasia</strong> (65% das suas compras)</p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <i class="fas fa-calendar"></i>
+                                        <h4>Frequência de compra</h4>
+                                        <p>Você compra em média <strong>2 livros por mês</strong></p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <i class="fas fa-star"></i>
+                                        <h4>Qualidade das escolhas</h4>
+                                        <p>Seus livros têm nota média de <strong>4.7 estrelas</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Dados Pessoais -->
+                    <div class="section-content" id="profile">
+                        <div class="section-header">
+                            <h2>Dados Pessoais</h2>
+                        </div>
+
+                        <div class="profile-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="first-name">Nome</label>
+                                    <input type="text" id="first-name" value="João">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Sobrenome</label>
+                                    <input type="text" id="last-name" value="Silva">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" value="joao.silva@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" value="(11) 99999-9999">
+                                </div>
+                                <div class="form-group">
+                                    <label for="birth-date">Data de Nascimento</label>
+                                    <input type="date" id="birth-date" value="1990-05-15">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gênero</label>
+                                    <select id="gender">
+                                        <option value="M" selected>Masculino</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="O">Outro</option>
+                                        <option value="N">Prefiro não informar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn-primary">Salvar Alterações</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Segurança -->
+                    <div class="section-content" id="security">
+                        <div class="section-header">
+                            <h2>Segurança</h2>
+                        </div>
+
+                        <div class="security-options">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Alterar Senha</h3>
+                                    <p>Mantenha sua conta segura com uma senha forte</p>
+                                </div>
+                                <button class="btn-secondary">Alterar Senha</button>
+                            </div>
+
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Autenticação em Duas Etapas</h3>
+                                    <p>Adicione uma camada extra de segurança à sua conta</p>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="two-factor">
+                                    <label for="two-factor"></label>
+                                </div>
+                            </div>
+
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Sessões Ativas</h3>
+                                    <p>Gerencie os dispositivos conectados à sua conta</p>
+                                </div>
+                                <button class="btn-secondary">Ver Sessões</button>
+                            </div>
+
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Excluir Conta</h3>
+                                    <p>Remover permanentemente sua conta e todos os dados</p>
+                                </div>
+                                <button class="btn-danger">Excluir Conta</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookland</h4>
+                    <p>Sua livraria online de confiança</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 14h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (11) 1234-5678</p>
+                    <p>📧 contato@Bookland.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/cliente.js"></script>
+</body>
+</html>
+
